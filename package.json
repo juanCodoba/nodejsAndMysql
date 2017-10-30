@@ -1,0 +1,22 @@
+{
+    "name": "adsi-prueba",
+    "version": "1.0.0",
+    "description": "prueba NODEJS, ejemplo banca adsi119561",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js"
+    },
+    "author": "Juan Cordoba",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "cors": "^2.8.4",
+        "express": "^4.16.2",
+        "mysql2": "^1.4.2",
+        "sequelize": "^4.20.1"
+    },
+    "devDependencies": {
+        "nodemon": "^1.12.1"
+    }
+}
