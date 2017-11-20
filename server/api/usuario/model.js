@@ -28,30 +28,30 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
 
         },
-        activ: {
+        activo: {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
             allowNull: false
 
         }
-    })
-    Usuario.associate = function(model) {
-        // ManyToOne
-        Usuario.belongsTo(model.TipoDocumento, {
-                'onDelete': 'RESTRICT',
-                foreignKey: {
-                    field: 'tipoDocumento',
-                    allowNull: false
-                }
-            })
-            // manyToMany
-        Usuario.belongsToMany(model.Rol, {
-            as: 'roles',
-            through: 'UsuariosRoles',
-            foreignKey: {
-                field: 'usuario'
-            }
-        })
-    }
+    });
+    // Usuario.associate = function(model) {
+    //     // ManyToOne
+    //     Usuario.belongsTo(model.TipoDocumento, {
+    //         'onDelete': 'RESTRICT',
+    //         foreignKey: {
+    //             field: 'tipoDocumento',
+    //             allowNull: false
+    //         }
+    //     });
+    //     // manyToMany
+    //     Usuario.belongsToMany(model.Rol, {
+    //         as: 'roles',
+    //         through: 'UsuariosRoles',
+    //         foreignKey: {
+    //             field: 'usuario'
+    //         }
+    //     });
+    // }
     return Usuario;
 }
